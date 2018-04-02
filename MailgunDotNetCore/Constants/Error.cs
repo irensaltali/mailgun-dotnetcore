@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Mailgun.Constants
+namespace MailgunDotNetCore.Constants
 {
     public class Error
     {

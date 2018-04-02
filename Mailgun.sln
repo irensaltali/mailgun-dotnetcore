@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailgun", "Mailgun\Mailgun.csproj", "{C642256E-A44E-47B6-80E3-E35E969110D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailgunDotNetCore", "MailgunDotNetCore\MailgunDotNetCore.csproj", "{C642256E-A44E-47B6-80E3-E35E969110D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailgun.Samples", "Mailgun.Samples\Mailgun.Samples.csproj", "{E3E64FD2-568D-4A2F-ADC8-EC4FF0820308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailgunDotNetCore.Samples", "MailgunDotNetCore.Samples\MailgunDotNetCore.Samples.csproj", "{E3E64FD2-568D-4A2F-ADC8-EC4FF0820308}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

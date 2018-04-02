@@ -1,6 +1,6 @@
-﻿using Mailgun.Framework;
+﻿using MailgunDotNetCore.Framework;
 
-namespace Mailgun.DTO
+namespace MailgunDotNetCore.DTO
 {
     public class TextEmailResponse : BaseResponse
     {

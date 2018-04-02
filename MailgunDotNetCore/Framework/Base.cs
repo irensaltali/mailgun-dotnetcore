@@ -1,6 +1,6 @@
-﻿using Mailgun.Constants;
+﻿using MailgunDotNetCore.Constants;
 
-namespace Mailgun.Framework
+namespace MailgunDotNetCore.Framework
 {
     public abstract class BaseResponse
     {

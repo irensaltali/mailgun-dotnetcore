@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mailgun\Mailgun.csproj" />
+    <ProjectReference Include="..\MailgunDotNetCore\MailgunDotNetCore.csproj" />
   </ItemGroup>
 
 </Project>

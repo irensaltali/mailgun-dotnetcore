@@ -1,9 +1,10 @@
-﻿using Mailgun.DTO;
+﻿using MailgunDotNetCore.DTO;
 using RestSharp;
 using RestSharp.Authenticators;
 using System;
+using System.Threading.Tasks;
 
-namespace Mailgun
+namespace MailgunDotNetCore
 {
     public class Mailgun
     {
@@ -11,7 +12,7 @@ namespace Mailgun
         private readonly string BaseUrl = "https://api.mailgun.net/v3";
         private readonly string APIKey = "key-6265bd875bde4983e5d91dc0db6ad7ba";
         private string From;
-        private bool TestMode;
+        public bool TestMode { get; set; }
 
         public Mailgun(string From = null, string Domain = null, string APIKey = null, bool TestMode = false)
         {
@@ -30,6 +31,10 @@ namespace Mailgun
             this.TestMode = TestMode;
         }
 
+        public async Task<TextEmailResponse> SendTextEmailAsync(TextEmailRequest request)
+        {
+            return await Task.Run(() => SendTextEmail(request));
+        }
         public TextEmailResponse SendTextEmail(TextEmailRequest request)
         {
             var response = new TextEmailResponse();
@@ -73,6 +78,10 @@ namespace Mailgun
             return response;
         }
 
+        public async Task<HTMLEmailResponse> SendHMTLEmailAsync(HTMLEmailRequest request)
+        {
+            return await Task.Run(() => SendHMTLEmail(request));
+        }
         public HTMLEmailResponse SendHMTLEmail(HTMLEmailRequest request)
         {
             var response = new HTMLEmailResponse();

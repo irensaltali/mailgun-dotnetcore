@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Mailgun.Samples
+namespace MailgunDotNetCore.Samples
 {
     public class Sample
     {
