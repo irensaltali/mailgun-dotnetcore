@@ -8,25 +8,24 @@ namespace MailgunDotNetCore
 {
     public class Mailgun
     {
-        private readonly string Domain = "sandboxad3e5404de614718b2d470bb676b2ed5.mailgun.org";
-        private readonly string BaseUrl = "https://api.mailgun.net/v3";
-        private readonly string APIKey = "key-6265bd875bde4983e5d91dc0db6ad7ba";
+        private readonly string Domain;
+        private readonly string BaseUrl= "https://api.mailgun.net/v3";
+        private readonly string APIKey;
         private string From;
         public bool TestMode { get; set; }
 
-        public Mailgun(string From = null, string Domain = null, string APIKey = null, bool TestMode = false)
+        public Mailgun(string DefaultFrom, string Domain, string APIKey, bool TestMode = false)
         {
             if (!string.IsNullOrEmpty(Domain))
             {
                 this.Domain = Domain;
-                this.BaseUrl += "/" + Domain;
             }
 
-            if (!string.IsNullOrEmpty(From))
-                this.From = From;
+            if (!string.IsNullOrEmpty(DefaultFrom))
+                this.From = DefaultFrom;
 
             if (!string.IsNullOrEmpty(APIKey))
-                this.From = APIKey;
+                this.APIKey = APIKey;
 
             this.TestMode = TestMode;
         }

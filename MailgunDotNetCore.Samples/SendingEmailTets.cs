@@ -10,10 +10,9 @@ namespace MailgunDotNetCore.Samples
         {
             var response = mailgun.SendTextEmail(new DTO.TextEmailRequest
             {
-                From = "iren@mottojoy.com",
-                To = "info@mottojoy.com",
-                Subject = "Konu",
-                TextBody = "Mesaj"
+                To = "iren@saltali.com",
+                Subject = "Subject",
+                TextBody = "Message"
             });
 
             Assert.IsTrue(response.IsSuccessfull);
@@ -24,11 +23,10 @@ namespace MailgunDotNetCore.Samples
         {
             var response = mailgun.SendHMTLEmail(new DTO.HTMLEmailRequest
             {
-                From = "iren@mottojoy.com",
-                To = "info@mottojoy.com",
-                Subject = "Konu",
-                TextBody = "Mesaj",
-                HTMLBody = "<html>HTML Mesaj</html>"
+                To = "iren@saltali.com",
+                Subject = "Subject",
+                TextBody = "Message",
+                HTMLBody = "<html>HTML Message</html>"
             });
 
             Assert.IsTrue(response.IsSuccessfull);
